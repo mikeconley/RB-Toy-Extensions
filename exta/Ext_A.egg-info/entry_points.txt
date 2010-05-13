@@ -1,0 +1,3 @@
+[reviewboard.extensions]
+Ext-A = exta.extension:ExtAExtension
+

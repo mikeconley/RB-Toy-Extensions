@@ -1,0 +1,3 @@
+[reviewboard.extensions]
+Ext-C = extc.extension:ExtCExtension
+

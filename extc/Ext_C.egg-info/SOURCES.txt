@@ -1,0 +1,9 @@
+setup.py
+Ext_C.egg-info/PKG-INFO
+Ext_C.egg-info/SOURCES.txt
+Ext_C.egg-info/dependency_links.txt
+Ext_C.egg-info/entry_points.txt
+Ext_C.egg-info/requires.txt
+Ext_C.egg-info/top_level.txt
+extc/__init__.py
+extc/extension.py
