@@ -1,2 +1,2 @@
-Ext-A
-Ext-B
+Ext-A>=0.1
+Ext-B>=0.1

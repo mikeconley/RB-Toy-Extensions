@@ -21,7 +21,7 @@ setup(
             'templates/extd/*.txt',
         ],
     },
-    install_requires=['Ext-C']
+    install_requires=['Ext-C>=0.1']
 )
 
 

@@ -5,4 +5,5 @@ Ext_B.egg-info/dependency_links.txt
 Ext_B.egg-info/entry_points.txt
 Ext_B.egg-info/top_level.txt
 extb/__init__.py
+extb/admin_urls.py
 extb/extension.py

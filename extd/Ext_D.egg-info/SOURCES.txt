@@ -6,4 +6,5 @@ Ext_D.egg-info/entry_points.txt
 Ext_D.egg-info/requires.txt
 Ext_D.egg-info/top_level.txt
 extd/__init__.py
+extd/admin_urls.py
 extd/extension.py

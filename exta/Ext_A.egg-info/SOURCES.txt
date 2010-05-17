@@ -5,4 +5,5 @@ Ext_A.egg-info/dependency_links.txt
 Ext_A.egg-info/entry_points.txt
 Ext_A.egg-info/top_level.txt
 exta/__init__.py
+exta/admin_urls.py
 exta/extension.py

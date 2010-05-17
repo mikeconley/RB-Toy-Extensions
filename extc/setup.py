@@ -21,7 +21,7 @@ setup(
             'templates/extc/*.txt',
         ],
     },
-    install_requires=['Ext-A','Ext-B']
+    install_requires=['Ext-A>=0.1','Ext-B>=0.1']
 )
 
 

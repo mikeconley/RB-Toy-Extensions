@@ -6,4 +6,5 @@ Ext_C.egg-info/entry_points.txt
 Ext_C.egg-info/requires.txt
 Ext_C.egg-info/top_level.txt
 extc/__init__.py
+extc/admin_urls.py
 extc/extension.py
