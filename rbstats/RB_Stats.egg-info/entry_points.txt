@@ -1,0 +1,3 @@
+[reviewboard.extensions]
+RB-Stats = rbstats.extension:RBStatsExtension
+

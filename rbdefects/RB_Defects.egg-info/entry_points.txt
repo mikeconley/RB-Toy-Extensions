@@ -1,0 +1,3 @@
+[reviewboard.extensions]
+RB-Defects = rbdefects.extension:RBDefectsExtension
+
