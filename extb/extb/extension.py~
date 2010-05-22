@@ -5,17 +5,17 @@ from reviewboard.extensions.base import Extension
 from reviewboard.extensions.hooks import DashboardHook, URLHook
 
 
-class ExtADashboardHook(DashboardHook):
+class ExtBDashboardHook(DashboardHook):
     def get_entries(self):
         return [{
-            'label': 'Ext-A',
+            'label': 'Ext-B',
             'url': settings.SITE_ROOT + 'exta/',
         }]
 
 
-class ExtAExtension(Extension):
+class ExtBExtension(Extension):
     is_configurable = True
 
-    def __init__(self):
+    def __init__(self, manager):
         Extension.__init__(self)
-        self.dashboard_hook = ExtADashboardHook(self)
+        self.dashboard_hook = ExtBDashboardHook(self)

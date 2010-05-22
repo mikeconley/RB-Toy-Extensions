@@ -5,7 +5,7 @@ from reviewboard.extensions.base import Extension
 from reviewboard.extensions.hooks import DashboardHook, URLHook
 
 
-class ExtBDashboardHook(DashboardHook):
+class RBStatsDashboardHook(DashboardHook):
     def get_entries(self):
         return [{
             'label': 'My Statistics',

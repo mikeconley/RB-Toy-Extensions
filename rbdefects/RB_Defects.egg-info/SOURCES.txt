@@ -7,3 +7,4 @@ RB_Defects.egg-info/top_level.txt
 rbdefects/__init__.py
 rbdefects/admin_urls.py
 rbdefects/extension.py
+rbdefects/models.py

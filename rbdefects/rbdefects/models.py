@@ -1,17 +1,6 @@
-class Defect(models.Model):
-    """
-    A defect filed upon a review request.
+from django.db import models
 
-    """
-    filediff = models.ForeignKey(FileDiff, verbose_name=_('file diff'),
-                                 related_name="comments")
-    interfilediff = models.ForeignKey(FileDiff,
-                                      verbose_name=_('interdiff file'),
-                                      blank=True, null=True,
-                                      related_name="interdiff_comments")
-
-    timestamp = models.DateTimeField(_('timestamp'), default=datetime.now)
-    text = models.TextField(_("comment text"))
-
-    class Meta:
-        ordering = ['timestamp']
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    middle_name = models.CharField(max_length=30, null=True)

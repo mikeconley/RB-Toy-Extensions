@@ -15,6 +15,7 @@ class ExtDDashboardHook(DashboardHook):
 
 class ExtDExtension(Extension):
     is_configurable = True
+    requires = ['extc.extension.ExtCExtension']
 
     def __init__(self):
         Extension.__init__(self)

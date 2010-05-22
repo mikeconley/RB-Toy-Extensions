@@ -15,6 +15,7 @@ class RBStatsDashboardHook(DashboardHook):
 
 class RBStatsExtension(Extension):
     is_configurable = True
+    requires = ['rbdefects.extension.RBDefectsExtension']
 
     def __init__(self):
         Extension.__init__(self)

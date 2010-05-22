@@ -16,6 +16,6 @@ class ExtADashboardHook(DashboardHook):
 class ExtAExtension(Extension):
     is_configurable = True
 
-    def __init__(self):
+    def __init__(self, manager):
         Extension.__init__(self)
         self.dashboard_hook = ExtADashboardHook(self)
