@@ -16,10 +16,10 @@ class RBStatsDashboardHook(DashboardHook):
 class RBStatsExtension(Extension):
     
     is_configurable = True
-    requires = ['rbdefects.extension.RBDefectsExtension']
+    requirements = ['rbdefects.extension.RBDefectsExtension']
     resources = [reviewing_session_resource]
     
     def __init__(self):
         Extension.__init__(self)
         self.dashboard_hook = RBStatsDashboardHook(self)
-        #TemplateHook(self, "base-scripts-post", "bears/bears.html", ['dashboard'])
+        #TemplateHook(self, "base-scripts-post", "bears/bears.html", ['new-review-request'])
