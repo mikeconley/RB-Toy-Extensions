@@ -22,4 +22,4 @@ class RBStatsExtension(Extension):
     def __init__(self):
         Extension.__init__(self)
         self.dashboard_hook = RBStatsDashboardHook(self)
-        #TemplateHook(self, "base-scripts-post", "bears/bears.html", ['dashboard'])
+        TemplateHook(self, "base-scripts-post", "rbstats/bears.html", ['view_diff', 'view_diff_revision', 'view_screenshot'])
