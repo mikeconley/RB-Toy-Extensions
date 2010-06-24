@@ -18,7 +18,7 @@ setup(
             'htdocs/css/*.css',
             'htdocs/js/*.js',
             'templates/rbstats/*.html',
-            'templates/rbstats/*.txt',
+            'templates/rbstats/*.txt'
         ],
     },
     install_requires=['RB-Defects>=0.1']

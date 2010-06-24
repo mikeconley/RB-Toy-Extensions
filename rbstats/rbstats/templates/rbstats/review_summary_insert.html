@@ -1,0 +1,8 @@
+{% load rbstats_tags %}
+
+{% if entry.review|has_reviewing_session %}
+<div>
+  Reviewing Time: {{entry.review.reviewing_session.working_seconds|seconds_to_duration}}
+</div>
+{% endif %}
+

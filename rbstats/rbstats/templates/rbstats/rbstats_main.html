@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load djblets_deco %}
+{% load i18n %}
+{% block title %}{% trans "Statistics" %}{% endblock %}
+
+{% block content %}
+{% box "reports" %}
+ <h1 class="title">{% trans "Review Board Statistics" %}</h1>
+ <div class="main">
+    <table>
+        <tbody>
+            <tr>
+                <td>Total Review Requests</td>
+                <td>{{total_review_requests}}</td>
+            </tr>
+            <tr>
+                <td>Total Reviews</td>
+                <td>{{total_reviews}}</td>
+            </tr>
+            <tr>
+                <td>Review Karma</td>
+                <td>{{review_karma}}</td>
+            </tr>
+            <tr>
+                <td>Total Reviewing Time</td>
+                <td>{{total_reviewing_time}}</td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+{% endbox %}
+{% endblock %}
