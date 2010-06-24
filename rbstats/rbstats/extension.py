@@ -60,4 +60,3 @@ def on_review_published(sender, **kwargs):
     review_session.save()
 
 review_published.connect(on_review_published)
-

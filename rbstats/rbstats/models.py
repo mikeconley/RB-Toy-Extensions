@@ -13,3 +13,6 @@ class ReviewingSession(models.Model):
     last_updated = models.DateTimeField(default=datetime.now, auto_now=True,
         blank=False)
     working_seconds = models.PositiveIntegerField(default=0, blank=False)
+
+    class Meta:
+        unique_together = ("review_request", "user", "review")
