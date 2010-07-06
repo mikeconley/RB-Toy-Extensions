@@ -18,7 +18,7 @@ def has_reviewing_session(review):
         # Hack alarm:  from here, I can't seem to import rbstats.models,
         # so I can't catch ReviewingSession.DoesNotExist.  This will
         # have to do.
-        if str(e.__class__) == "<class 'rbstats.models.DoesNotExist'>":
+        if str(e.__class__) == "<class 'rbstopwatch.models.DoesNotExist'>":
             return False
         raise e
 

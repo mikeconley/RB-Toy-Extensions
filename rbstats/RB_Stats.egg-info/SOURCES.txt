@@ -3,8 +3,12 @@ RB_Stats.egg-info/PKG-INFO
 RB_Stats.egg-info/SOURCES.txt
 RB_Stats.egg-info/dependency_links.txt
 RB_Stats.egg-info/entry_points.txt
-RB_Stats.egg-info/requires.txt
 RB_Stats.egg-info/top_level.txt
 rbstats/__init__.py
 rbstats/admin_urls.py
 rbstats/extension.py
+rbstats/models.py
+rbstats/resources.py
+rbstats/settings.py
+rbstats/urls.py
+rbstats/views.py

@@ -1,0 +1,64 @@
+<script type="text/javascript" language="Javascript">
+
+RBStopwatch = {};
+
+RBStopwatch.review_id = '{{review_request.id}}';
+RBStopwatch.ext_id = "rbstopwatch.extension.RBStopwatchExtension";
+RBStopwatch.ext_api_root = SITE_ROOT + "api/extensions/" + RBStopwatch.ext_id + "/";
+RBStopwatch.activity_resource = "reviewing-sessions"
+RBStopwatch.ping_url = RBStopwatch.ext_api_root + 
+                   RBStopwatch.activity_resource + "/" + 
+                   RBStopwatch.review_id + "/activity/";
+
+RBStopwatch.wait_time = 11000;
+RBStopwatch.saw_activity = false;
+RBStopwatch.ping_in_progress = false;
+
+
+RBStopwatch.on_activity = function() {
+    RBStopwatch.saw_activity = true;
+}
+
+RBStopwatch.on_complete = function(response) {
+    RBStopwatch.ping_in_progress = false;
+}
+
+RBStopwatch.ping = function() {
+    if(RBStopwatch.ping_in_progress) {
+        RBStopwatch.msg('Ping already in progress - skipping...');
+    }
+    if(RBStopwatch.saw_activity) {
+        $.ajax({
+            type: "PUT",
+            url: RBStopwatch.ping_url,
+            complete: RBStopwatch.on_complete
+        });
+        RBStopwatch.ping_in_progress = true;
+    }
+    RBStopwatch.reset();
+}
+
+RBStopwatch.msg = function(msg) {
+    if(typeof(console) != 'undefined') {
+        console.log(msg);
+    }
+}
+
+RBStopwatch.reset = function() {
+    RBStopwatch.saw_activity = false;
+    setTimeout(RBStopwatch.ping, RBStopwatch.wait_time);
+}
+
+RBStopwatch.boot = function() {
+    $(document.body).mousemove(RBStopwatch.on_activity);
+    // Just in case user is typing
+    $(':input').live('keydown', RBStopwatch.on_activity);
+    // And just in case the user is scrolling the mousewheel
+    $(document.body).mousewheel(RBStopwatch.on_activity);
+    // Reset the timer, and we're ready to go.
+    RBStopwatch.reset();
+}
+
+RBStopwatch.boot();
+
+</script>

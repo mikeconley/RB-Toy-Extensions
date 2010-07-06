@@ -20,8 +20,7 @@ setup(
             'templates/rbstats/*.html',
             'templates/rbstats/*.txt'
         ],
-    },
-    install_requires=['RB-Defects>=0.1']
+    }
 )
 
 
