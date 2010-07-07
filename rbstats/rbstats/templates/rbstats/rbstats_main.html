@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load djblets_deco %}
+{% load rbstats_tags %}
 {% load i18n %}
 {% block title %}{% trans "Statistics" %}{% endblock %}
 
@@ -17,14 +18,12 @@
                 <td>Total Reviews</td>
                 <td>{{total_reviews}}</td>
             </tr>
+{%          for hook in table_hook_entries %}
             <tr>
-                <td>Review Karma</td>
-                <td>{{review_karma}}</td>
+                <td>{{hook|get_description}}</td>
+                <td>{{hook|get_value:user}}</td>
             </tr>
-            <tr>
-                <td>Total Reviewing Time</td>
-                <td>{{total_reviewing_time}}</td>
-            </tr>
+{%          endfor %}
         </tbody>
     </table>
  </div>
