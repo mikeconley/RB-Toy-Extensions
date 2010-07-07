@@ -3,7 +3,7 @@ import datetime
 
 from django import template
 
-
+import pdb;pdb.set_trace()
 register = template.Library()
 
 
@@ -17,8 +17,8 @@ def has_reviewing_session(review):
     except Exception, e:
         # Hack alarm:  from here, I can't seem to import rbstats.models,
         # so I can't catch ReviewingSession.DoesNotExist.  This will
-        # have to do.
-        if str(e.__class__) == "<class 'rbstopwatch.models.DoesNotExist'>":
+        # have to do.        
+        if 'DoesNotExist' in str(e.__class__):
             return False
         raise e
 
